@@ -1,0 +1,27 @@
+{
+  "name": "8puzzle",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@cycle/core": "^6.0.0",
+    "@cycle/dom": "^9.0.2",
+    "lodash": "^4.1.0",
+    "rx": "^4.0.7"
+  },
+  "devDependencies": {
+    "babel": "^6.3.26",
+    "babelify": "^6.3.0",
+    "browserify": "^13.0.0",
+    "http-server": "^0.8.5",
+    "mkdirp": "^0.5.1",
+    "webpack": "^1.12.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebrowserify": "mkdirp dist",
+    "browserify": "browserify src/main.js -t babelify --outfile dist/main.js",
+    "start": "npm install && npm run browserify && http-server"
+  },
+  "author": "",
+  "license": "ISC"
+}
